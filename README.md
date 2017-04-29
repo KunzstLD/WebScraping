@@ -1,2 +1,2 @@
 # WebScraping
-Loading weather data/etc into R 
+Loading weather data from wunderground.com into R 
