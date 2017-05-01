@@ -26,7 +26,8 @@ head(Data, n=2L)
 # Turning List into data.table!
 Data_Cluj = rbindlist(Data,use.names=TRUE,fill=TRUE)
 head(Data_Cluj,n=3L)
-
+names(Data_Cluj)[14] <- 'DateUTC'
+Data_Cluj$DateUTC <- gsub('(.+)(<br />)', '\\1', Data_Cluj$DateUTC)
 # write as csv
 write.csv(Data_Cluj, file="D:/Studium/Documents/Weather data/Data_Cluj.csv")
 
